@@ -15,14 +15,14 @@ app.get("/player/:tag", async (req, res) => {
     const playerTag = encodeURIComponent(req.params.tag);
     try{
         const response = await fetch(`https://api.brawlstars.com/v1/players/${playerTag}`, {
-            headers: {"Authorization": `Bearer ${API_KEY}`} //what is bearer 
+            headers: {"Authorization": `Bearer ${API_KEY}`} //Bearer std way of sending API auntentication 
         });
         const data = await response.json();
-        response.json(data);
+        res.json(data);
     }
     catch (error){
-        response.status(500).json({ error : error.message });
+        res.status(500).json({ error : error.message });
     }
 });
  
-app.listen(PORT, () => console.log(`Server running at on port: ${PORT}`));
+app.listen(PORT, () => console.log(`Server running at on port: ${PORT}`)); //to know which port i am
