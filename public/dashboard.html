@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Brawl Stars Grader</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Header -->
+        <div class="dashboard-header">
+            <h1 class="dashboard-title"> Brawl Stars Grader</h1>
+            <p class="dashboard-subtitle">Find and Grade Your Stats</p>
+        </div>
+
+        <!-- Search Section -->
+        <div class="search-section">
+            <div class="search-box">
+                <input 
+                    type="text" 
+                    id="supercell" 
+                    class="search-input"
+                    placeholder="Enter your Supercell ID..."
+                    autocomplete="off"
+                >
+                <button id="fetchdata" class="search-button">Find</button>
+            </div>
+            <p class="search-hint">Enter your player tag (e.g., #ABCD1234)</p>
+        </div>
+
+        <!-- Results Section -->
+        <div id="data-container" class="data-container"></div>
+        <button id="toggle-brawlers" class="toggle-button" style="display:none;">Show Brawlers</button>
+        <ul id="brawler-container" class="brawler-container"></ul>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>

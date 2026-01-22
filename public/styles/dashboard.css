@@ -1,0 +1,201 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    color: #fff;
+}
+
+.dashboard-container {
+    background: linear-gradient(180deg, rgba(45, 52, 84, 0.95) 0%, rgba(30, 36, 60, 0.95) 100%);
+    border: 3px solid #ffd700;
+    border-radius: 20px;
+    padding: 50px;
+    max-width: 600px;
+    width: 100%;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8), inset 0 0 30px rgba(255, 215, 0, 0.1);
+    animation: slideIn 0.5s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.dashboard-header {
+    text-align: center;
+    margin-bottom: 40px;
+    border-bottom: 2px solid #ffd700;
+    padding-bottom: 20px;
+}
+
+.dashboard-title {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    color: #ffd700;
+    text-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+    letter-spacing: 2px;
+}
+
+.dashboard-subtitle {
+    font-size: 1.1em;
+    color: #b0b0b0;
+    font-style: italic;
+}
+
+.search-section {
+    margin-bottom: 40px;
+}
+
+.search-box {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.search-input {
+    flex: 1;
+    padding: 14px 18px;
+    font-size: 1em;
+    border: 2px solid #ffd700;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.search-input::placeholder {
+    color: #a0a0a0;
+}
+
+.search-input:focus {
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.4);
+}
+
+.search-button {
+    padding: 14px 35px;
+    font-size: 1.1em;
+    font-weight: bold;
+    background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
+    color: #1a1a2e;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 5px 15px rgba(255, 215, 0, 0.3);
+}
+
+.search-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(255, 215, 0, 0.5);
+}
+
+.search-button:active {
+    transform: translateY(0);
+}
+
+.search-hint {
+    font-size: 0.9em;
+    color: #a0a0a0;
+    text-align: center;
+}
+
+.data-container {
+    background: rgba(255, 215, 0, 0.05);
+    border: 1px solid #ffd700;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    min-height: 100px;
+    display: none;
+}
+
+.data-container.active {
+    display: block;
+}
+
+.data-container p {
+    margin: 8px 0;
+    line-height: 1.6;
+}
+
+.toggle-button {
+    width: 100%;
+    padding: 12px;
+    font-size: 1em;
+    font-weight: bold;
+    background: linear-gradient(135deg, #ff6b9d 0%, #c06c84 100%);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.toggle-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(255, 107, 157, 0.3);
+}
+
+.brawler-container {
+    list-style: none;
+    margin-top: 20px;
+    display: grid;
+    gap: 10px;
+}
+
+.brawler-container li {
+    background: rgba(255, 215, 0, 0.08);
+    border: 1px solid #ffd700;
+    border-radius: 8px;
+    padding: 12px;
+    text-align: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.brawler-container li:hover {
+    background: rgba(255, 215, 0, 0.15);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 215, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .dashboard-container {
+        padding: 30px;
+    }
+
+    .dashboard-title {
+        font-size: 2em;
+    }
+
+    .search-box {
+        flex-direction: column;
+    }
+
+    .search-button {
+        width: 100%;
+    }
+}
