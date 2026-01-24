@@ -30,9 +30,27 @@ app.get("/player/:tag", async (req, res) => {
     }
 });
 
+app.get("/player/:tag/club", async (req, res) => {
+    const playerTag = encodeURIComponent(req.params.tag);
+    try {
+        const response = await fetch(`https://api.brawlstars.com/v1/players/${playerTag}/Club`, {
+            headers: {"Authorization" : `Bearer ${API_KEY}`}
+        });
+        const data = await response.json();
+        res.json(data);
+    }
+    catch (error){
+        res.status(500).json({ error : error.message });
+    }
+});
+
 const path = require("path");
 app.get("/", (req, res) => {
     res.sendFile(path.join(__dirname, "public", "dashboard.html")); //serve static files
+});
+
+app.get("/player", (req, res) => {
+    res.sendFile(path.join(__dirname, "public", "player.html"));
 });
  
 app.listen(PORT, () => console.log(`Server running at on port: ${PORT}`)); //to know which port i am

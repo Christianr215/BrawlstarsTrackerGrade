@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Player Info - Brawl Stars Grader</title>
+    <link rel="stylesheet" href="styles/player.css">
+    <link rel="icon" type="image/png" href="photos/Brawl_Icon.png">
+</head>
+<body>
+    <img src="photos/Spike.png" alt="Spike" class="decorative-image spike">
+    <img src="photos/El_Primo.png" alt="El Primo" class="decorative-image el-primo">
+    
+    <div class="dashboard-container">
+        <!-- Header -->
+        <div class="dashboard-header">
+            <h1 class="dashboard-title">Player Details</h1>
+            <p class="dashboard-subtitle">Brawl Stars Grader</p>
+        </div>
+
+        <!-- Player Info Section -->
+        <div id="player-info" class="data-container"></div>
+        
+        <!-- Brawlers Section -->
+        <div class="search-section">
+            <h2 style="color: #ffd700; margin-bottom: 15px;">Brawlers</h2>
+            <ul id="brawler-container" class="brawler-container"></ul>
+        </div>
+        
+        <div class="back-link-section">
+            <a href="/" class="back-link">← Back to Dashboard</a>
+        </div>
+    </div>
+
+    <script src="player.js"></script>
+</body>
+</html>

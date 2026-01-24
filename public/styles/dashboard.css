@@ -13,6 +13,28 @@ body {
     justify-content: center;
     padding: 20px;
     color: #fff;
+    position: relative;
+    overflow: hidden;
+}
+
+.decorative-image {
+    position: fixed;
+    opacity: 0.7;
+    pointer-events: none;
+}
+
+.spike {
+    top: 20px;
+    right: 10px;
+    width: 280px;
+    height: 280px;
+}
+
+.el-primo {
+    bottom: 80px;
+    left: 40px;
+    width: 280px;
+    height: 280px;
 }
 
 .dashboard-container {
@@ -181,7 +203,6 @@ body {
     box-shadow: 0 5px 15px rgba(255, 215, 0, 0.2);
 }
 
-/* Responsive Design */
 @media (max-width: 600px) {
     .dashboard-container {
         padding: 30px;

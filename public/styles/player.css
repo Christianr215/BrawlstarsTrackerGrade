@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 20px;
+    color: #fff;
+    position: relative;
+    overflow-y: auto;
+    padding-top: 40px;
+}
+
+.decorative-image {
+    position: fixed;
+    opacity: 0.7;
+    pointer-events: none;
+}
+
+.spike {
+    top: 20px;
+    right: 10px;
+    width: 280px;
+    height: 280px;
+}
+
+.el-primo {
+    bottom: 80px;
+    left: 40px;
+    width: 280px;
+    height: 280px;
+}
+
+.dashboard-container {
+    background: linear-gradient(180deg, rgba(45, 52, 84, 0.95) 0%, rgba(30, 36, 60, 0.95) 100%);
+    border: 3px solid #ffd700;
+    border-radius: 20px;
+    padding: 50px;
+    max-width: 600px;
+    width: 100%;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8), inset 0 0 30px rgba(255, 215, 0, 0.1);
+    animation: slideIn 0.5s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.dashboard-header {
+    text-align: center;
+    margin-bottom: 40px;
+    border-bottom: 2px solid #ffd700;
+    padding-bottom: 20px;
+}
+
+.dashboard-title {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    color: #ffd700;
+    text-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+    letter-spacing: 2px;
+}
+
+.dashboard-subtitle {
+    font-size: 1.1em;
+    color: #b0b0b0;
+    font-style: italic;
+}
+/* data-container is the box with the username and club above list */
+.data-container {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    border-left: 4px solid #ffd700;
+}
+
+.data-container h2 {
+    color: #ffd700;
+    margin-bottom: 10px;
+}
+
+.data-container p {
+    color: #b0b0b0;
+    margin: 8px 0;
+}
+
+.search-section {
+    margin-bottom: 30px;
+}
+
+.search-section h2 {
+    color: #ffd700;
+    margin-bottom: 15px;
+    font-size: 1.5em;
+}
+
+.brawler-container {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.brawler-container li {
+    padding: 15px;
+    background-color: rgba(255, 215, 0, 0.1);
+    border: 2px solid #ffd700;
+    border-radius: 10px;
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+.brawler-container li:hover {
+    background-color: rgba(255, 215, 0, 0.2);
+    transform: translateX(5px);
+}
+
+.back-link-section {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 2px solid #ffd700;
+}
+
+.back-link {
+    color: #ffd700;
+    text-decoration: none;
+    font-size: 1.1em;
+    transition: all 0.3s ease;
+}
+
+.back-link:hover {
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.6);
+}
