@@ -11,6 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
         
         // Navigate to player page with the tag as a URL parameter on the same window
         window.location.href = `player?tag=${encodeURIComponent(tag)}`;
+        //?tag couldve been called anything, its where tag is determine 
     });
     });
 

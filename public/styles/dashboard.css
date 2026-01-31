@@ -6,7 +6,8 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 25%, #90caf9 50%, #64b5f6 75%, #42a5f5 100%);
+    background-attachment: fixed;
     min-height: 100vh;
     display: flex;
     align-items: center;
@@ -38,13 +39,13 @@ body {
 }
 
 .dashboard-container {
-    background: linear-gradient(180deg, rgba(45, 52, 84, 0.95) 0%, rgba(30, 36, 60, 0.95) 100%);
-    border: 3px solid #ffd700;
+    background: linear-gradient(135deg, rgba(13, 71, 161, 0.9) 0%, rgba(25, 103, 210, 0.9) 50%, rgba(21, 128, 239, 0.9) 100%);
+    border: 3px solid #00bcd4;
     border-radius: 20px;
     padding: 50px;
     max-width: 600px;
     width: 100%;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8), inset 0 0 30px rgba(255, 215, 0, 0.1);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25), inset 0 0 40px rgba(0, 188, 212, 0.08);
     animation: slideIn 0.5s ease-out;
 }
 
@@ -62,21 +63,22 @@ body {
 .dashboard-header {
     text-align: center;
     margin-bottom: 40px;
-    border-bottom: 2px solid #ffd700;
+    border-bottom: 2px solid #00bcd4;
     padding-bottom: 20px;
 }
 
 .dashboard-title {
     font-size: 2.5em;
     margin-bottom: 10px;
-    color: #ffd700;
-    text-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+    color: #e0f2f1;
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     letter-spacing: 2px;
+    font-weight: 700;
 }
 
 .dashboard-subtitle {
     font-size: 1.1em;
-    color: #b0b0b0;
+    color: #b3e5fc;
     font-style: italic;
 }
 
@@ -94,7 +96,7 @@ body {
     flex: 1;
     padding: 14px 18px;
     font-size: 1em;
-    border: 2px solid #ffd700;
+    border: 2px solid #00bcd4;
     border-radius: 10px;
     background-color: rgba(255, 255, 255, 0.1);
     color: #fff;
@@ -103,32 +105,33 @@ body {
 }
 
 .search-input::placeholder {
-    color: #a0a0a0;
+    color: #b3e5fc;
 }
 
 .search-input:focus {
     background-color: rgba(255, 255, 255, 0.2);
-    box-shadow: 0 0 20px rgba(255, 215, 0, 0.4);
+    box-shadow: 0 0 20px rgba(0, 188, 212, 0.5);
 }
 
 .search-button {
     padding: 14px 35px;
     font-size: 1.1em;
     font-weight: bold;
-    background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%);
-    color: #1a1a2e;
+    background: linear-gradient(135deg, #00bcd4 0%, #00acc1 100%);
+    color: #0d47a1;
     border: none;
     border-radius: 10px;
     cursor: pointer;
     transition: all 0.3s ease;
     text-transform: uppercase;
     letter-spacing: 1px;
-    box-shadow: 0 5px 15px rgba(255, 215, 0, 0.3);
+    box-shadow: 0 5px 15px rgba(0, 188, 212, 0.4);
 }
 
 .search-button:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(255, 215, 0, 0.5);
+    box-shadow: 0 8px 25px rgba(0, 188, 212, 0.6);
+    background: linear-gradient(135deg, #4dd0e1 0%, #26c6da 100%);
 }
 
 .search-button:active {
@@ -142,8 +145,8 @@ body {
 }
 
 .data-container {
-    background: rgba(255, 215, 0, 0.05);
-    border: 1px solid #ffd700;
+    background: rgba(0, 188, 212, 0.12);
+    border: 1px solid #00bcd4;
     border-radius: 10px;
     padding: 20px;
     margin-bottom: 20px;
@@ -158,6 +161,7 @@ body {
 .data-container p {
     margin: 8px 0;
     line-height: 1.6;
+    color: #e0f2f1;
 }
 
 .toggle-button {
@@ -165,8 +169,8 @@ body {
     padding: 12px;
     font-size: 1em;
     font-weight: bold;
-    background: linear-gradient(135deg, #ff6b9d 0%, #c06c84 100%);
-    color: #fff;
+    background: linear-gradient(135deg, #00bcd4 0%, #00acc1 100%);
+    color: #0d47a1;
     border: none;
     border-radius: 10px;
     cursor: pointer;
@@ -177,7 +181,7 @@ body {
 
 .toggle-button:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(255, 107, 157, 0.3);
+    box-shadow: 0 8px 20px rgba(0, 188, 212, 0.4);
 }
 
 .brawler-container {
@@ -188,19 +192,20 @@ body {
 }
 
 .brawler-container li {
-    background: rgba(255, 215, 0, 0.08);
-    border: 1px solid #ffd700;
+    background: rgba(0, 188, 212, 0.15);
+    border: 1px solid #00bcd4;
     border-radius: 8px;
     padding: 12px;
     text-align: center;
     transition: all 0.3s ease;
     cursor: pointer;
+    color: #e0f2f1;
 }
 
 .brawler-container li:hover {
-    background: rgba(255, 215, 0, 0.15);
+    background: rgba(0, 188, 212, 0.25);
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(255, 215, 0, 0.2);
+    box-shadow: 0 5px 15px rgba(0, 188, 212, 0.3);
 }
 
 @media (max-width: 600px) {
