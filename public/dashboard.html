@@ -8,36 +8,135 @@
     <link rel="icon" type="image/png" href="photos/Brawl_Icon.png">
 </head>
 <body>
-    <!-- Decorative Images -->
-    <img src="photos/Spike.png" alt="Spike" class="decorative-image spike">
-    <img src="photos/El_Primo.png" alt="El Primo" class="decorative-image el-primo">
-    
     <div class="dashboard-container">
         <!-- Header -->
         <div class="dashboard-header">
-            <h1 class="dashboard-title"> Brawl Stars Grader</h1>
-            <p class="dashboard-subtitle">Find and Grade Your Stats</p>
+            <h1 class="dashboard-title">Brawl Stars Grader</h1>
+            <p class="dashboard-subtitle">Rankings & Statistics</p>
         </div>
 
-        <!-- Search Section -->
-        <div class="search-section">
-            <div class="search-box">
+        <!-- Main Leaderboard Box with 3 Splits -->
+        <div class="leaderboard-box">
+            <div class="leaderboard-section">
+                <h2 class="section-title">Clubs</h2>
+                <div class="rankings-list">
+                    <div class="ranking-item">
+                        <span class="rank">1</span>
+                        <span class="name">Dragon Slayers</span>
+                        <span class="score">45,230</span>
+                    </div>
+                    <div class="ranking-item">
+                        <span class="rank">2</span>
+                        <span class="name">Legendary Heroes</span>
+                        <span class="score">42,150</span>
+                    </div>
+                    <div class="ranking-item">
+                        <span class="rank">3</span>
+                        <span class="name">Elite Squad</span>
+                        <span class="score">40,890</span>
+                    </div>
+                    <div class="ranking-item">
+                        <span class="rank">4</span>
+                        <span class="name">Rising Stars</span>
+                        <span class="score">38,560</span>
+                    </div>
+                    <div class="ranking-item">
+                        <span class="rank">5</span>
+                        <span class="name">Power Team</span>
+                        <span class="score">35,420</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="leaderboard-section">
+                <h2 class="section-title">Brawlers</h2>
+                <div class="rankings-list">
+                    <div class="ranking-item">
+                        <span class="rank">1</span>
+                        <span class="name">Shelly</span>
+                        <span class="score">9,800</span>
+                    </div>
+                    <div class="ranking-item">
+                        <span class="rank">2</span>
+                        <span class="name">Colt</span>
+                        <span class="score">9,650</span>
+                    </div>
+                    <div class="ranking-item">
+                        <span class="rank">3</span>
+                        <span class="name">Nita</span>
+                        <span class="score">9,520</span>
+                    </div>
+                    <div class="ranking-item">
+                        <span class="rank">4</span>
+                        <span class="name">Bull</span>
+                        <span class="score">9,380</span>
+                    </div>
+                    <div class="ranking-item">
+                        <span class="rank">5</span>
+                        <span class="name">Jessie</span>
+                        <span class="score">9,120</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="leaderboard-section">
+                <h2 class="section-title">Players</h2>
+                <div class="rankings-list">
+                    <div class="ranking-item">
+                        <span class="rank">1</span>
+                        <span class="name">ProGamer99</span>
+                        <span class="score">52,340</span>
+                    </div>
+                    <div class="ranking-item">
+                        <span class="rank">2</span>
+                        <span class="name">SkyWalker</span>
+                        <span class="score">51,220</span>
+                    </div>
+                    <div class="ranking-item">
+                        <span class="rank">3</span>
+                        <span class="name">NeonBlaze</span>
+                        <span class="score">49,890</span>
+                    </div>
+                    <div class="ranking-item">
+                        <span class="rank">4</span>
+                        <span class="name">ShadowKing</span>
+                        <span class="score">48,670</span>
+                    </div>
+                    <div class="ranking-item">
+                        <span class="rank">5</span>
+                        <span class="name">PhantomX</span>
+                        <span class="score">47,450</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Search Boxes Below -->
+        <div class="search-boxes-container">
+            <div class="search-mini-box">
+                <h3>Search Player</h3>
                 <input 
                     type="text" 
-                    id="supercell" 
-                    class="search-input"
-                    placeholder="Enter your Supercell ID..."
+                    id="player-search" 
+                    class="mini-search-input"
+                    placeholder="Enter Player ID..."
                     autocomplete="off"
                 >
-                <button id="fetchdata" class="search-button">Find</button>
+                <button id="search-player-btn" class="mini-search-button">Search</button>
             </div>
-            <p class="search-hint">Enter your player tag (e.g., #ABCD1234)</p>
-        </div>
 
-        <!-- Results Section -->
-        <div id="data-container" class="data-container"></div>
-        <button id="toggle-brawlers" class="toggle-button" style="display:none;">Show Brawlers</button>
-        <ul id="brawler-container" class="brawler-container"></ul>
+            <div class="search-mini-box">
+                <h3>Search Club</h3>
+                <input 
+                    type="text" 
+                    id="club-search" 
+                    class="mini-search-input"
+                    placeholder="Enter Club ID..."
+                    autocomplete="off"
+                >
+                <button id="search-club-btn" class="mini-search-button">Search</button>
+            </div>
+        </div>
     </div>
 
     <script src="main.js"></script>
