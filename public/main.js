@@ -8,8 +8,10 @@ document.addEventListener("DOMContentLoaded", () => {
             return;
         }
         
+        // Remove # if user included it
+        const cleanID = playerID.startsWith('#') ? playerID.slice(1) : playerID;
         // Navigate to player page with the ID as a URL parameter
-        window.location.href = `player?tag=${encodeURIComponent(playerID)}`;
+        window.location.href = `player?tag=${encodeURIComponent(cleanID)}`;
     });
 
     //Search Club
@@ -21,8 +23,10 @@ document.addEventListener("DOMContentLoaded", () => {
             return;
         }
         
-        // Navigate to club page with the ID as a URL parameter (or handle as needed)
-        window.location.href = `player?tag=${encodeURIComponent(clubID)}`;
+        // Remove # if user included it
+        const cleanID = clubID.startsWith('#') ? clubID.slice(1) : clubID;
+        // Navigate to club page with the ID as a URL parameter
+        window.location.href = `club?tag=${encodeURIComponent(cleanID)}`;
     });
 
     //Allow Enter key to trigger search

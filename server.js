@@ -44,13 +44,52 @@ app.get("/player/:tag/club", async (req, res) => {
     }
 });
 
+//Club API endpoints
+app.get("/clubs/:tag", async (req, res) => {
+    const clubTag = encodeURIComponent(req.params.tag);
+    try {
+        const response = await fetch(`https://api.brawlstars.com/v1/clubs/${clubTag}`, {
+            headers: {"Authorization" : `Bearer ${API_KEY}`}
+        });
+        const data = await response.json();
+        res.json(data);
+    }
+    catch (error){
+        res.status(500).json({ error : error.message });
+    }
+});
+
+app.get("/clubs/:tag/members", async (req, res) => {
+    const clubTag = encodeURIComponent(req.params.tag);
+    try {
+        const response = await fetch(`https://api.brawlstars.com/v1/clubs/${clubTag}/members`, {
+            headers: {"Authorization" : `Bearer ${API_KEY}`}
+        });
+        const data = await response.json();
+        res.json(data);
+    }
+    catch (error){
+        res.status(500).json({ error : error.message });
+    }
+});
+
 const path = require("path");
+var countryCode = 1;
+
+app.get("/rankings/", (req, res) => {
+    res.sendFile(path.join(__dirname, "public", "rankings.html"));
+});
+
 app.get("/", (req, res) => {
     res.sendFile(path.join(__dirname, "public", "dashboard.html")); //serve static files
 });
 
 app.get("/player", (req, res) => {
     res.sendFile(path.join(__dirname, "public", "player.html"));
+});
+
+app.get("/club", (req, res) => {
+    res.sendFile(path.join(__dirname, "public", "club.html"));
 });
  
 app.listen(PORT, () => console.log(`Server running at on port: ${PORT}`)); //to know which port i am

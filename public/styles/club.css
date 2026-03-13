@@ -1,0 +1,190 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #1a1a1a;
+    background-attachment: fixed;
+    min-height: 100vh;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 20px;
+    color: #fff;
+    position: relative;
+    overflow-y: auto;
+    padding-top: 40px;
+}
+
+.decorative-image {
+    position: fixed;
+    opacity: 0.7;
+    pointer-events: none;
+}
+
+.spike {
+    top: 20px;
+    right: 10px;
+    width: 280px;
+    height: 280px;
+}
+
+.el-primo {
+    bottom: 80px;
+    left: 40px;
+    width: 280px;
+    height: 280px;
+}
+
+.dashboard-container {
+    background: rgba(30, 30, 30, 0.9);
+    border: 2px solid #00bcd4;
+    border-radius: 15px;
+    padding: 50px;
+    max-width: 600px;
+    width: 100%;
+    box-shadow: 0 10px 40px rgba(0, 188, 212, 0.2);
+    animation: slideInUp 0.6s ease-out;
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.dashboard-header {
+    text-align: center;
+    margin-bottom: 40px;
+    border-bottom: 2px solid #00bcd4;
+    padding-bottom: 20px;
+}
+
+.dashboard-title {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    color: #fff;
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+.dashboard-subtitle {
+    font-size: 1.1em;
+    color: #a0a0a0;
+    font-style: italic;
+}
+
+/* data-container is the box with the club name and info above list */
+.data-container {
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: rgba(0, 188, 212, 0.1);
+    border-radius: 10px;
+    border-left: 4px solid #00bcd4;
+}
+
+.data-container h2 {
+    color: #e0e0e0;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.data-container p {
+    color: #b3e5fc;
+    margin: 8px 0;
+}
+
+.search-section {
+    margin-bottom: 30px;
+}
+
+.brawlers-dropdown-btn {
+    width: 100%;
+    padding: 15px;
+    background-color: rgba(0, 188, 212, 0.15);
+    border: 2px solid #00bcd4;
+    border-radius: 10px;
+    color: #e0e0e0;
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.brawlers-dropdown-btn:hover {
+    background-color: rgba(0, 188, 212, 0.25);
+    box-shadow: 0 0 15px rgba(0, 188, 212, 0.4);
+}
+
+.brawlers-dropdown-btn.open {
+    background-color: rgba(0, 188, 212, 0.3);
+}
+
+.dropdown-arrow {
+    transition: transform 0.3s ease;
+    display: inline-block;
+}
+
+.brawlers-dropdown-btn.open .dropdown-arrow {
+    transform: rotate(180deg);
+}
+
+.search-section h2 {
+    color: #00bcd4;
+    margin-bottom: 15px;
+    font-size: 1.5em;
+}
+
+.brawler-container {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.brawler-container li {
+    padding: 15px;
+    background-color: rgba(0, 188, 212, 0.1);
+    border: 2px solid #00bcd4;
+    border-radius: 10px;
+    color: #e0e0e0;
+    transition: all 0.3s ease;
+}
+
+.brawler-container li:hover {
+    background-color: rgba(0, 188, 212, 0.2);
+    transform: translateX(5px);
+    box-shadow: 0 5px 15px rgba(0, 188, 212, 0.3);
+}
+
+.back-link-section {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 2px solid #00bcd4;
+}
+
+.back-link {
+    color: #e0e0e0;
+    text-decoration: none;
+    font-size: 1.1em;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.back-link:hover {
+    color: #4dd0e1;
+    text-shadow: 0 0 10px rgba(0, 188, 212, 0.5);
+}

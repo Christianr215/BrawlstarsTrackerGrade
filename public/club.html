@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Club Info - Brawl Stars Grader</title>
+    <link rel="stylesheet" href="styles/club.css">
+    <link rel="icon" type="image/png" href="photos/Brawl_Icon.png">
+</head>
+<body>
+    <img src="photos/Spike.png" alt="Spike" class="decorative-image spike">
+    <img src="photos/El_Primo.png" alt="El Primo" class="decorative-image el-primo">
+    
+    <div class="dashboard-container">
+        <!-- Header -->
+        <div class="dashboard-header">
+            <h1 class="dashboard-title">Club Details</h1>
+            <p class="dashboard-subtitle">Brawl Stars Grader</p>
+        </div>
+
+        <!-- Club Info Section -->
+        <div id="club-info" class="data-container"></div>
+        
+        <!-- Members Section -->
+        <div class="search-section">
+            <button class="brawlers-dropdown-btn" id="members-dropdown-btn">
+                <span>Members</span>
+                <span class="dropdown-arrow">▼</span>
+            </button>
+            <ul id="members-container" class="brawler-container" style="display: none;"></ul>
+        </div>
+        
+        <div class="back-link-section">
+            <a href="/" class="back-link">← Back to Dashboard</a>
+        </div>
+    </div>
+
+    <script src="club.js"></script>
+</body>
+</html>
