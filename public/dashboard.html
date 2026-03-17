@@ -9,10 +9,32 @@
 </head>
 <body>
     <div class="dashboard-container">
-        <!-- Header -->
-        <div class="dashboard-header">
-            <h1 class="dashboard-title">Brawl Stars Grader</h1>
-            <p class="dashboard-subtitle">Rankings & Statistics</p>
+        <!-- Header with Country Selector -->
+        <div class="dashboard-header-wrapper">
+            <div class="dashboard-header">
+                <h1 class="dashboard-title">Brawl Stars Grader</h1>
+                <p class="dashboard-subtitle">Rankings & Statistics</p>
+            </div>
+            <div class="country-selector">
+                <label for="country-dropdown">Country:</label>
+                <select id="country-dropdown">
+                    <option value="US">🇺🇸 United States</option>
+                    <option value="GB">🇬🇧 United Kingdom</option>
+                    <option value="CA">🇨🇦 Canada</option>
+                    <option value="AU">🇦🇺 Australia</option>
+                    <option value="DE">🇩🇪 Germany</option>
+                    <option value="FR">🇫🇷 France</option>
+                    <option value="ES">🇪🇸 Spain</option>
+                    <option value="IT">🇮🇹 Italy</option>
+                    <option value="JP">🇯🇵 Japan</option>
+                    <option value="KR">🇰🇷 South Korea</option>
+                    <option value="BR">🇧🇷 Brazil</option>
+                    <option value="MX">🇲🇽 Mexico</option>
+                    <option value="IN">🇮🇳 India</option>
+                    <option value="RU">🇷🇺 Russia</option>
+                    <option value="CN">🇨🇳 China</option>
+                </select>
+            </div>
         </div>
 
         <!-- Main Leaderboard Box with 3 Splits -->

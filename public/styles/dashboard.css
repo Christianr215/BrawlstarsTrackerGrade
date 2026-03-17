@@ -25,11 +25,61 @@ body {
     flex-direction: column;
     align-items: center;
     gap: 30px;
+    position: relative;
+}
+
+.dashboard-header-wrapper {
+    width: 100%;
+    position: relative;
+    margin-bottom: 20px;
 }
 
 .dashboard-header {
     text-align: center;
-    margin-bottom: 20px;
+}
+
+.country-selector {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    align-items: flex-end;
+}
+
+.country-selector label {
+    font-size: 0.8em;
+    color: #a0a0a0;
+    font-weight: 600;
+}
+
+.country-selector select {
+    padding: 8px 12px;
+    background: rgba(0, 188, 212, 0.1);
+    border: 2px solid #00bcd4;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 0.85em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 160px;
+}
+
+.country-selector select:hover {
+    background: rgba(0, 188, 212, 0.2);
+    box-shadow: 0 4px 12px rgba(0, 188, 212, 0.3);
+}
+
+.country-selector select:focus {
+    outline: none;
+    background: rgba(0, 188, 212, 0.2);
+    box-shadow: 0 0 15px rgba(0, 188, 212, 0.4);
+}
+
+.country-selector select option {
+    background: #1a1a1a;
+    color: #fff;
 }
 
 .dashboard-title {

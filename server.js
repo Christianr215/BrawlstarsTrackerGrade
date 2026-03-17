@@ -2,7 +2,6 @@ require('dotenv').config(); //package that helps you manage environment variable
 const express = require("express");
 const cors = require("cors");
 const app = express(); //imports the express framework
-//brawl stars test id = #209P09L8
 
 const PORT = 3000;
 
@@ -16,7 +15,12 @@ if (!API_KEY) {
 
 //get is for retreiving data, post would be for sending
 app.get("/player/:tag", async (req, res) => {
-    const playerTag = encodeURIComponent(req.params.tag); //grabs the value from the url and formats for API
+    let playerTag = req.params.tag; //grabs the value from the url and formats for API
+    // Add # if not already present (Brawl Stars API requires the #)
+    if (!playerTag.startsWith('%23') && !playerTag.startsWith('#')) {
+        playerTag = '#' + playerTag;
+    }
+    playerTag = encodeURIComponent(playerTag);
     try{ //the ":" tells express that this part changes based on user
         const response = await fetch(`https://api.brawlstars.com/v1/players/${playerTag}`, { //await is so it doesnt activiate without fetching first
             headers: {"Authorization": `Bearer ${API_KEY}`} //Bearer std way of sending API auntentication 
@@ -31,9 +35,14 @@ app.get("/player/:tag", async (req, res) => {
 });
 
 app.get("/player/:tag/club", async (req, res) => {
-    const playerTag = encodeURIComponent(req.params.tag);
+    let playerTag = req.params.tag;
+    // Add # if not already present
+    if (!playerTag.startsWith('%23') && !playerTag.startsWith('#')) {
+        playerTag = '#' + playerTag;
+    }
+    playerTag = encodeURIComponent(playerTag);
     try {
-        const response = await fetch(`https://api.brawlstars.com/v1/players/${playerTag}/Club`, {
+        const response = await fetch(`https://api.brawlstars.com/v1/players/${playerTag}/club`, {
             headers: {"Authorization" : `Bearer ${API_KEY}`}
         });
         const data = await response.json();
@@ -46,7 +55,12 @@ app.get("/player/:tag/club", async (req, res) => {
 
 //Club API endpoints
 app.get("/clubs/:tag", async (req, res) => {
-    const clubTag = encodeURIComponent(req.params.tag);
+    let clubTag = req.params.tag;
+    // Add # if not already present
+    if (!clubTag.startsWith('%23') && !clubTag.startsWith('#')) {
+        clubTag = '#' + clubTag;
+    }
+    clubTag = encodeURIComponent(clubTag);
     try {
         const response = await fetch(`https://api.brawlstars.com/v1/clubs/${clubTag}`, {
             headers: {"Authorization" : `Bearer ${API_KEY}`}
@@ -60,7 +74,12 @@ app.get("/clubs/:tag", async (req, res) => {
 });
 
 app.get("/clubs/:tag/members", async (req, res) => {
-    const clubTag = encodeURIComponent(req.params.tag);
+    let clubTag = req.params.tag;
+    // Add # if not already present
+    if (!clubTag.startsWith('%23') && !clubTag.startsWith('#')) {
+        clubTag = '#' + clubTag;
+    }
+    clubTag = encodeURIComponent(clubTag);
     try {
         const response = await fetch(`https://api.brawlstars.com/v1/clubs/${clubTag}/members`, {
             headers: {"Authorization" : `Bearer ${API_KEY}`}
